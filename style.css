@@ -1,0 +1,21 @@
+@import "node_modules/font-awesome/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro');
+body, button, input, select {  font-family: 'Source Sans Pro', sans-serif; font-size: 100%; line-height: 140%; }
+pre, code { font-family: 'Source Code Pro', monospace;  }
+.hbox, .vbox { display: flex; }
+.hbox { flex-direction: row; }
+.vbox { flex-direction: column; }
+.grow { flex: 1;  }
+.scroll { overflow: auto; }
+.fill { position: absolute; top: 0; bottom: 0; left: 0; right:0; }
+/* put all inputs in the second column, except for radio & checkboxes */
+input, textarea, select {  order: 2; flex: 1 1 auto;  }
+input[type="checkbox"], input[type="radio"] { order: 1; flex: none; width: auto; margin-left: 10em; }
+/* put all labels in the first column, unless after radio or checkboxes */
+label { order: 1;  width: 10em; text-align: right; }
+input[type="checkbox"] ~ label, input[type="radio"] ~ label { width: auto; }
+
+#sources {
+    height: 250px;
+    width: 200px;
+}
